@@ -1,0 +1,51 @@
+<!--mini登陆条-->
+<!--<div id="head_login">
+<div class="w1000">
+<div id="mini">
+{if intval(get_cookie('_userid'))==0}
+<a href="{U('member/index/register')}" target="_blank">注册</a> <a href="{U('member/index/login')}"  target="_blank">登录</a>
+{else}
+你好：{safe_replace(get_cookie('_username'))}，<a href="{U('member/index/init')}">会员中心</a> <a href="{U('member/index/logout')}">退出</a>
+{/if}
+</div>
+欢迎光临本站！
+</div>
+</div>-->
+
+<div id="header">
+	<div id="logo">
+	 <a href="{$site[site_url]}"><img src="{STATIC_URL}images/companyName.png" title="{$site[site_name]}" alt="{$site[site_name]}"></a>
+	</div>
+</div>
+<!--导航条-->
+<div class="menu">
+  <ul class="nav">
+	 <li><a {if !isset($catid)} class="current" {/if} href="{$site[site_url]}">首页</a></li>
+	{m:nav field="catid,catname,arrchildid,pclink" where="parentid=0" limit="20"}
+	{loop $data $v}
+	    <li>
+			<a{if isset($catid) && $v['catid']==$catid} class="current" {/if} href="{$v[pclink]}">{$v[catname]}</a>
+			<!-- 这里是二级栏目的循环，不需要的可以删除，代码开始 -->
+			{if $v['arrchildid']!=$v['catid']} 
+			{php $r = get_childcat($v['catid']);}
+			<ul class="sub_nav">
+				{loop $r $v}
+				<li><a href="{$v[pclink]}">{$v[catname]}</a></li>
+				{/loop}	
+			</ul>
+			{/if}
+			<!-- 这里是二级栏目的循环，不需要的可以删除，代码结束 -->
+		</li>		
+	{/loop}	
+  </ul>
+</div>
+<div class="clearfix"></div>	
+<script>
+	$(function(){
+		$(".nav>li").hover(function(){
+			$(this).children('ul').stop(true,true).show(200);
+		},function(){
+			$(this).children('ul').stop(true,true).hide(200);
+		})
+	})
+</script>

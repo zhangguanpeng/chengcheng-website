@@ -1,0 +1,64 @@
+<?php include $this->admin_tpl('meta');?>
+<title>SQL命令行 - YzmCMS内容管理系统</title>
+<style>
+dl{margin-top:10px;}
+dl dt{background:#888;color:#fff;padding:5px;}
+dl dd{padding:5px 0;border-bottom:1px solid #eee;}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> SQL命令行 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="explain"> 
+       <p>注意：<span class="c-red">执行SQL将直接操作数据库，请谨慎使用</span>（表前缀可用“yzmcms_”代替）.</p>
+    </div>
+	<div class="formdoby_normal mt-20"> 
+		<form method="post" name="myform" id="myform">
+			<ul>
+				 <li>
+				  <textarea class="textarea" name="sqlstr" required="required"><?php if(isset($sqlstr)) echo $sqlstr;?></textarea>
+				 </li>
+				 <li><input class="dosubmit w_120 btn-primary radius" name="dosubmit" type="submit" value="提交" id="dosubmit"></li>
+			</ul>
+		</form>
+		<?php if(isset($str)){?>
+		<div class="mt-20">
+		<?php 
+		echo $str;
+		if(isset($arr) && !empty($arr) && is_array($arr)){
+			echo '<dl>';
+		    foreach($arr as $key => $val){
+				echo '<dt> 记录：'.($key+1).'</dt>';
+				foreach($val as $k => $v){
+					echo '<dd><strong>'.$k.'</strong> ：'.$v.'</dd>';
+				}
+			}
+			echo '</dl>';
+		}
+		?>
+		</div>
+		<?php }?>
+	</div>
+</div>
+<?php include $this->admin_tpl('footer');?>
+<script type="text/javascript">
+	$("#dosubmit").click(function(){
+		var sqlstr = document.myform.sqlstr.value;
+		if(sqlstr==""){
+			layer.msg("请输入SQL语句！");
+			return false;
+		}
+		var reg = /^delete/i;	
+		var reg2 = /^(.*)where(.*)/i;	
+		if(reg.test(sqlstr) && !reg2.test(sqlstr) ){
+			layer.confirm('检测到delete语句没有加where条件，是否继续？',function(index){
+				document.getElementById('myform').submit();
+			});
+			return false;
+		}		
+		return true;
+	})
+</script>
+
+</body>
+</html>

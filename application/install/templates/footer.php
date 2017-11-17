@@ -1,0 +1,1 @@
+<div class="footer"> &copy; 2014-2017 <a href="http://www.yzmcms.com/" target="_blank">www.yzmcms.com</a> YzmCMS内容管理系统 </div>

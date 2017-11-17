@@ -1,0 +1,22 @@
+@charset "utf-8";
+/**
+ * YZMCMS 内容管理系统
+ * @author           袁志蒙  
+ * @license          http://www.yzmcms.com
+ */
+/* CSS Document */
+
+/* DIY表单页面 */
+.diyform_table{width:750px;margin:10px auto 0;}
+.diyform_table tr{line-height:37px;}
+.diyform_table tr td{padding:0 5px;}
+.diyform_table .input_text{width:200px;border: 1px solid #d0d0d0;padding:2px;height:22px;line-height:22px; font-size: 12px;outline:none;}
+.diyform_table textarea{width:500px;border: 1px solid #d0d0d0;padding:2px;height:120px;line-height:22px; font-size: 12px;outline:none;}
+.diyform_table select{border: 1px solid #d0d0d0;height: 25px;line-height: 25px;min-width:110px;background: #f9f9f9;border-color: #666666 #cccccc #cccccc #666666;padding-right:5px}
+.diyform_table .option_label{margin-right:16px}
+.diyform_table .submit{margin-top:10px;padding:0;height:35px;width:100px;line-height:35px;color:#fff;background:#2f549f;cursor:pointer;border:none;outline:none;}
+.diyform_table .submit:hover{background:#3e69c5}
+
+#diyform_list{width:750px;margin:0 auto;}
+#diyform_list .list li{height:30px;line-height:30px;margin-top:20px;border-bottom: 1px dotted #E1E3E6;padding-left:20px;}
+#diyform_list .list li span{float:right;}

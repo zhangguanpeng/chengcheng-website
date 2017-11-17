@@ -1,0 +1,31 @@
+<?php include $this->admin_tpl('meta');?>
+<title>批量移动 - YzmCMS内容管理系统</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 内容管理 <span class="c-gray en">&gt;</span> 批量移动 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<article class="page-container">
+<div class="formdoby_normal"> 
+	<form method="post" onsubmit="return check_all()">
+		<input type="hidden" name="modelid" value="<?php echo $modelid;?>">
+		<ul>
+			 <li><label><i class="Hui-iconfont">&#xe67a;</i>批量移动分类</label></li>
+			 <li><label>内容ID：</label><input type="text" class="input-text w_420" placeholder="多个ID请用英文','隔开" name="ids" readonly="readonly" value="<?php echo $ids;?>"></li>
+			 <li><label>目标栏目：</label><span style="display:inline-block;"><?php echo select_category('catid', 0, '内容分类', true, $modelid); ?></span></li>
+			 <li>&nbsp;</li>
+			 <li><input class="btn btn-primary radius w_120" name="dosubmit" type="submit" value="提交"> <input type="button" class="btn btn-default radius w_120" value="返回" onclick="javascript:history.go(-1)"></li>
+		</ul>
+	</form>
+</div>
+</article>
+<?php include $this->admin_tpl('footer');?> 
+<script type="text/javascript">
+function check_all(){
+	if($("select[name='catid']").val()=='0'){
+		layer.msg('请选择内容分类！');
+		return false;
+	}
+	return true;			
+}
+</script>
+</body>
+</html>

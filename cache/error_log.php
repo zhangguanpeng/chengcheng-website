@@ -1,0 +1,1 @@
+<?php exit;?> Error : 11-16 17:20:14 | 2 | mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) | D:\xampp\htdocs\YzmCMS\yzmphp\core\class\db_mysqli.class.php | 35

@@ -1,0 +1,44 @@
+<?php include $this->admin_tpl('meta');?>
+<title>栏目管理 - YzmCMS内容管理系统</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 内容管理 <span class="c-gray en">&gt;</span> 栏目管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l"><a href="javascript:;" onclick="yzm_open('添加栏目','<?php echo U('add', array('type'=>0));?>',800,500)" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加栏目</a> <a href="javascript:;" onclick="yzm_open('添加单页','<?php echo U('add', array('type'=>1));?>',800,500)" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加单页</a> <a href="javascript:;" onclick="yzm_open('添加外部链接','<?php echo U('add', array('type'=>2));?>',800,500)" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加外部链接</a></span></div>
+	<form action="<?php echo U('order');?>" method="post">
+	<table class="table table-border table-bordered table-bg table-hover">
+		<thead>
+			<tr class="text-c">
+				<th width="50">排序</th>
+				<th width="40">栏目ID</th>
+				<th class="text-l">栏目名称</th>
+				<th width="60">栏目类型</th>
+				<th width="65">所属模型</th>		
+				<th width="50">允许投稿</th>
+				<th width="130">管理操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+			   foreach($data as $val){
+			 ?>
+			<tr class="text-c">
+				<td><?php if($val['parentid']=="0") echo '<input type="text" class="input-text listorder" name="listorder[]" value="'.$val["listorder"].'"><input type="hidden" name="catid[]" value="'.$val["catid"].'">';?></td>
+				<td><?php echo $val['catid'];?></td>
+				<td class="text-l"><?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-', count(explode(',',$val['abspath']))-2); if($val['type']=="0"){ $str = U('content/add', array('modelid'=>$val['modelid'],'catid'=>$val['catid'])); }elseif($val['type']=="1"){ $str = U('page_content', array('catid'=>$val['catid']));}else{ $str = $val['pclink'].'"  target="_blank';} echo '<a href="'.$str.'">'.$val['catname'].'</a>';?></td>
+				<td><?php echo $val['type']=="0" ? '内部栏目' : ($val['type']=="1" ? '<span style="color:green">单页面</span>' : '<span style="color:red">外部链接</span>');?></td>
+				<td><?php if($val['modelid']) echo $modelarr[$val['modelid']];?></td>
+				<td><?php echo $val['member_publish'] ? '<span style="color:red">是</span>' : '否';?></td>
+				<td class="td-manage"><a title="增加子类" href="javascript:;" onclick="yzm_open('增加栏目','<?php echo U('add',array('modelid'=>$val['modelid'],'type'=>$val['type'],'catid'=>$val['catid']));?>',800,500)" style="text-decoration:none">增加子类</a> | <a title="编辑栏目" href="javascript:;" onclick="yzm_open('编辑栏目','<?php echo U('edit',array('type'=>$val['type'],'catid'=>$val['catid']));?>',800,500)" style="text-decoration:none">编辑</a> | <a title="删除" href="javascript:;" onclick="yzm_del('<?php echo U('delete',array('type'=>$val['type'],'catid'=>$val['catid']));?>')" style="text-decoration:none">删除</a></td>
+			</tr>
+			<?php 
+			   }		 
+			?>	
+		</tbody>
+	</table>
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l"><input class="orderbutton btn-primary radius" name="dosubmit" value="排序" type="submit"></span></div>
+	</form>
+</div>
+<?php include $this->admin_tpl('footer');?>
+</body>
+</html>
