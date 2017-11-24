@@ -94,7 +94,7 @@
 				  <h2 class="ind_bt"><a target="_blank" href="#" class="gengduo">更多>></a>新闻动态</h2>
 				<ul>
 				  <!-- 这里只做演示，选择modelid为1的特荐信息，您可以根据自己的需求进行更改 -->
-				  {m:lists field="title,inputtime,url" modelid="1" flag="3" limit="10"}
+				  {m:lists field="title,inputtime,url" modelid="1" flag="3" limit="15"}
 				   {loop $data $v}
 				   <li>-<span>{date('m-d',$v['inputtime'])}</span><a href="{$v[url]}" title="{$v[title]}">{str_cut($v['title'], 75)}</a></li>
 				  {/loop}
@@ -112,6 +112,13 @@
 		
 		      </div>-->
 		  </div>
+            <div class="right">
+                <div class="market-network"><img src="{STATIC_URL}images/network.png"></div>
+                <div class="contact-us">
+                    <h2 class="ind_bt">联系我们</h2>
+                    <p></p>
+                </div>
+            </div>
 
 		</div>
          <div class="clearfix"></div>

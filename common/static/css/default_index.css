@@ -52,12 +52,36 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 
 
 .center_top{}
-.center{width:333px;float:left;margin:0 20px;_margin:0 18px;padding:0px 10px;}
-.pad_0{width:353px;padding:0px;}
+.center{width:400px;float:left;margin:0 20px;_margin:0 18px;padding:0px 10px;}
+.pad_0{width:420px;padding:0px;}
 .top_title{color:#454545;font-size:14px;padding:0 10px;display:block;height:30px;line-height:30px;border-bottom:1px solid #dadada;margin-bottom:5px;}
 .center_top ul{margin:0 10px;}
+.center_top li{line-height: 25px}
 .center_top ul li span{float:right;color:#666}
 
+.right{
+    float: right;
+}
+.market-network{
+    width:250px;
+    height: 180px;
+    padding: 5px;
+    border: 1px solid #dadada;
+}
+.market-network img{width: 100%}
+.contact-us{
+    width:250px;
+    height: 195px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #dadada;
+}
+.contact-us p{
+    width: 100%;
+    height: 158px;
+    margin-top: 5px;
+    background-color: #EDECEC;
+}
 .top_bor{border-top:1px solid #dadada}
 .center_bottom {margin-top:10px;padding-bottom:10px;height:283px;overflow:hidden;_width:335px;}
 .new_list ul{margin:0 10px;}
@@ -115,7 +139,7 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 .img_text strong a{color:#464646}
 .img_text p a{color:#2d64b3}
 
-.news_img{margin-top:20px;border:1px solid #dadada;overflow:hidden;height:200px;}
+.news_img{border:1px solid #dadada;overflow:hidden;height:200px;}
 
 .w185_imgnews {margin-top:15px;}
 .w185_imgnews ul{margin-left:8px}
