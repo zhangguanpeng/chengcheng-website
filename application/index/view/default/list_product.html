@@ -11,23 +11,26 @@
 	  <meta name="description" content="{$description}" />
   </head>
   <body>
-{m:include "index","header"} 
-	<div class="location">当前位置：{get_location($catid)}</div>
-	
-	{m:lists field="title,url,thumb,brand,price,stock" catid="$catid" limit="10" page="page"}
-	{loop $data $v}	
-	<div class="main_product">
-		<div class="product_list">
-			<img src="{if !empty($v['thumb'])}{$v[thumb]}{else}{STATIC_URL}images/nopic.jpg{/if}" title="{$v['title']}" alt="{$v['title']}">
-			<div class="pro_list_right">
-				<a class="pro_name" href="{$v[url]}">{str_cut($v['title'], 69)}</a>
-				<span class="block pro_rmb">￥{$v[price]}元</span>
-				<span class="block pro_kc">库存：{$v[stock]}个</span>
-				<a class="block pro_gm" href="{$v[url]}" target="_blank">查看详情</a>
+{m:include "index","header"}
+	<div id="container">
+		<div class="location">当前位置：{get_location($catid)}</div>
+
+		{m:lists field="title,url,thumb,brand,price,stock" catid="$catid" limit="10" page="page"}
+		{loop $data $v}
+		<div class="main_product">
+			<div class="product_list">
+				<img src="{if !empty($v['thumb'])}{$v[thumb]}{else}{STATIC_URL}images/nopic.jpg{/if}" title="{$v['title']}" alt="{$v['title']}">
+				<div class="pro_list_right">
+					<a class="pro_name" href="{$v[url]}">{str_cut($v['title'], 69)}</a>
+					<span class="block pro_rmb">￥{$v[price]}元</span>
+					<span class="block pro_kc">库存：{$v[stock]}个</span>
+					<a class="block pro_gm" href="{$v[url]}" target="_blank">查看详情</a>
+				</div>
 			</div>
-		</div>		
+		</div>
+		{/loop}
+		<div class="clearfix"></div>
+		<div id="page">{$pages}</div>
 	</div>
-	{/loop}
-	<div class="clearfix"></div>
-	<div id="page">{$pages}</div>	
+
 {m:include "index","footer"} 

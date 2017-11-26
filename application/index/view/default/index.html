@@ -64,39 +64,21 @@
 		<div class="box">
             <div class="left">
                 <div class="left_top">
-                    <h2 class="ind_bt"><a target="_blank" href="#" class="gengduo">更多>></a>公司简介</h2>
+                    <h2 class="ind_bt"><a target="_blank" href="/guanyuwomen/" class="gengduo">更多>></a>公司简介</h2>
                     <a href="#" target="_blank"><img src="{STATIC_URL}images/company.png"></a>
                     <a href="#" target="_blank" class="ptitle">诚诚复合材料有限公司</a>
-                    <p class="pic_p">诚诚复合材料有限公司创立于2002年，位于泰安市岱岳区岱岳新兴产业园。公司多年来专业从事甲酸盐系列产品的研发和生产。主导产品有甲酸、甲酸钙、甲酸钠等产品。现已形成年产甲酸（85%）15000吨、甲酸钙12000吨、甲酸钠10000吨的生产规模。现公司产品广泛应用于制革、建材、饲料、医药...<a href="http://www.yzmcms.com/" target="_blank">[详细]</a></p>
+                    <p class="pic_p">诚诚复合材料有限公司创立于2002年，位于泰安市岱岳区岱岳新兴产业园。公司多年来专业从事甲酸盐系列产品的研发和生产。主导产品有甲酸、甲酸钙、甲酸钠等产品。现已形成年产甲酸（85%）15000吨、甲酸钙12000吨、甲酸钠10000吨的生产规模。现公司产品广泛应用于制革、建材、饲料、医药...<a href="/guanyuwomen/" target="_blank">[详细了解]</a></p>
                 </div>
-                <!--<div class="left_bottom">
-                    <a href="http://blog.yzmcms.com/guanyu/" target="_blank"><img src="{STATIC_URL}images/default.jpg" title="关于YzmCMS" alt="关于YzmCMS"></a>
-                    <a href="http://blog.yzmcms.com/guanyu/" target="_blank" class="ptitle ptitle12">关于YzmCMS</a>
-                    <p class="pic_p">YzmCMS是一款轻量级免费开源的内容管理系统，基于PHP+Mysql架构的，可运行在Linux、Windows、MacOSX...<a href="http://blog.yzmcms.com/guanyu/" target="_blank">[详细]</a></p>
-                </div>-->
             </div>
-		  <!--<div class="left">
-			  <div class="left_bottom">
-		        	<h2><a href="#" target="_blank">更多>></a><span>TAG标签</span></h2>
-					<div class="new_ct">
-                    <ul>
-					{m:tag field="id,tag,total" limit="20"}
-					{loop $data $v}
-					   <li><a href="{U('search/index/tag',array('id'=>$v['id']))}" target="_blank">{$v[tag]}</a></li>	
-					{/loop}						
-					</ul>
-					</div>
-		      </div>			  
-		  </div>-->
+
 		  <div class="center pad_0">
 			  <div class="center_top">
 
-				  <h2 class="ind_bt"><a target="_blank" href="#" class="gengduo">更多>></a>新闻动态</h2>
+				  <h2 class="ind_bt"><a target="_blank" href="/xinwenzhongxin/" class="gengduo">更多>></a>新闻动态</h2>
 				<ul>
-				  <!-- 这里只做演示，选择modelid为1的特荐信息，您可以根据自己的需求进行更改 -->
 				  {m:lists field="title,inputtime,url" modelid="1" flag="3" limit="15"}
 				   {loop $data $v}
-				   <li>-<span>{date('m-d',$v['inputtime'])}</span><a href="{$v[url]}" title="{$v[title]}">{str_cut($v['title'], 75)}</a></li>
+				   <li><span>{date('m-d',$v['inputtime'])}</span><a href="{$v[url]}" title="{$v[title]}">{str_cut($v['title'], 75)}</a></li>
 				  {/loop}
                 </ul>
 		      </div>
@@ -116,81 +98,29 @@
                 <div class="market-network"><img src="{STATIC_URL}images/network.png"></div>
                 <div class="contact-us">
                     <h2 class="ind_bt">联系我们</h2>
-                    <p></p>
+                    <ul>
+                        <li class="contact-person">联系人：彭世伟</li>
+                        <li class="contact-mobile">手  机：13176123777</li>
+                        <li class="contact-phone">电  话：0538-8680888</li>
+                        <li class="contact-fax">传  真：0538-8680889</li>
+                        <li class="contact-email">邮  箱：sumeina2006@163.com</li>
+                        <li class="contact-address">地  址：泰安市岱岳区岱岳新兴产业园</li>
+                    </ul>
                 </div>
             </div>
 
 		</div>
          <div class="clearfix"></div>
-         <!--<div class="guanggao">
-		  &lt;!&ndash; 这里只做演示，您可以添加自己的广告位 &ndash;&gt;
-		  <h1>免费又好用的CMS建站系统，就选YzmCMS!</h1>
-		 </div>-->
-		<!--<div class="box">
-			<div class="left">
-              <div class="guanzhubox">
-                 <h2 class="ind_bt"><a href="#" class="gengduo">更多>></a>栏目分类一</h2>
-		      </div>
-			  <div class="list_news">
-					<ul>
-					&lt;!&ndash; 这里只做演示，您可以根据自己的需求更改catid和其他参数 &ndash;&gt;
-					{m:lists field="title,url" catid="1" limit="11"}
-					{loop $data $v}
-					   <li><a href="{$v[url]}" title="{$v[title]}" target="_blank">{$v[title]}</a></li>	
-					{/loop}					 
-				    </ul>            
-		      </div>
-			</div>
-		  <div class="center">
-              <h2 class="ind_bt"><a href="#" class="gengduo">更多>></a>栏目分类二</h2>
-			  <div class="center_bottom">
-				<ul>
-					&lt;!&ndash; 这里只做演示，您可以根据自己的需求更改catid和其他参数 &ndash;&gt;
-					{m:lists field="title,url" catid="2" limit="11"}
-					{loop $data $v}
-					   <li>-<a href="{$v[url]}" title="{$v[title]}" target="_blank">{$v[title]}</a></li>	
-					{/loop}	
-				</ul>
-		
-		      </div>		
-		  </div>
-		  <div class="right">
-			  <div class="guanzhubox">
-                 <h2 class="ind_bt"><a href="#"  class="gengduo">更多>></a>栏目分类三</h2>
-		      </div>
-			  <div class="list_news">
-					<ul>
-					&lt;!&ndash; 这里只做演示，您可以根据自己的需求更改catid和其他参数 &ndash;&gt;
-					{m:lists field="title,url" catid="3" limit="11"}
-					{loop $data $v}
-					   <li><a href="{$v[url]}" title="{$v[title]}" target="_blank">{$v[title]}</a></li>	
-					{/loop}						 
-				</ul>            
-		      </div>		
-		  </div>		  
-		</div>		
-         <div class="clearfix"></div>-->
          <div class="news_img">
-		   <h2 class="ind_bt tit_img"><a  href="#" target="_blank" class="gengduo">更多>></a>图文资讯</h2>
+		   <h2 class="ind_bt tit_img"><a  href="/chanpinzhongxin/" target="_blank" class="gengduo">更多>></a>产品展示</h2>
 			  <div class="w185_imgnews">
  				<ul>
-				   {m:lists field="title,thumb,url" modelid="1" thumb="1" limit="5"}
+				   {m:lists field="title,thumb,url" catid="6" flag="3" thumb="1" limit="5"}
 				   {loop $data $k=>$v}
 				   <li{if $k==4} class="m_r0"{/if}><a href="{$v[url]}"><img src="{$v[thumb]}" alt="{$v[title]}" title="{$v[title]}"><em>{str_cut($v['title'], 45)}</em></a></li>
 				   {/loop}										
 				</ul>               
 		      </div>		 
 		 </div>		 
-         <div class="clearfix"></div>		 
-		<!--友情链接-->
-		<!--<div id="links">
-			<p>友情链接：</p>
-			 <ul>
-			{m:link field="url,logo,name" where="status=1" order="listorder ASC" limit="20"}
-			{loop $data $v}
-			   <li><a href="{$v[url]}" target="_blank">{$v[name]}</a></li>	
-			{/loop}			   
-			 </ul>
-		</div>-->
-
+         <div class="clearfix"></div>
 {m:include "index","footer"}

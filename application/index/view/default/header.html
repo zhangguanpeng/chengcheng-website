@@ -1,20 +1,9 @@
-<!--mini登陆条-->
-<!--<div id="head_login">
-<div class="w1000">
-<div id="mini">
-{if intval(get_cookie('_userid'))==0}
-<a href="{U('member/index/register')}" target="_blank">注册</a> <a href="{U('member/index/login')}"  target="_blank">登录</a>
-{else}
-你好：{safe_replace(get_cookie('_username'))}，<a href="{U('member/index/init')}">会员中心</a> <a href="{U('member/index/logout')}">退出</a>
-{/if}
-</div>
-欢迎光临本站！
-</div>
-</div>-->
-
 <div id="header">
-	<div id="logo">
-	 <a href="{$site[site_url]}"><img src="{STATIC_URL}images/companyName.png" title="{$site[site_name]}" alt="{$site[site_name]}"></a>
+	<div class="chengcheng_logo">
+		<a href="{$site[site_url]}" ><img src="{STATIC_URL}images/chengcheng_logo.png" title="{$site[site_name]}" alt="{$site[site_name]}"></a>
+	</div>
+	<div class="chengcheng_companyName">
+		<a href="{$site[site_url]}"><img src="{STATIC_URL}images/companyName.png" title="{$site[site_name]}" alt="{$site[site_name]}"></a>
 	</div>
 </div>
 <!--导航条-->

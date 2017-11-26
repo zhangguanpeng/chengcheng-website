@@ -37,7 +37,7 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 .right_g{ width:268px;overflow:hidden;border:1px solid #cdcdcd;}
 .left_g{ width:668px;overflow:hidden;border:1px solid #cdcdcd;margin:20px 0;}
 .block{display:block}
-.ind_bt{font-size:16px;color:#464646;height:35px;line-height:35px;font-weight:normal;border:1px solid #DBDBDB;border-top:5px solid #09c;overflow:hidden;padding-left:20px;background:#fff;padding-right:10px;}
+.ind_bt{font-size:16px;color:#464646;height:35px;line-height:35px;font-weight:normal;border:1px solid #DBDBDB;border-top:5px solid #3879D9;overflow:hidden;padding-left:20px;background:#fff;padding-right:10px;}
 .mt_20{margin-top:20px;}
 .mtb_20{margin:20px 0;}
 .pl_10{padding-left:10px}
@@ -100,9 +100,9 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 
 
 /* 产品模型 */
-.cat_product{margin:20px 5px;font-size:14px;color:#555}
+.cat_product{margin:20px 5px;font-size:14px;color:#555;border-bottom: 2px solid #3879D9; height: 35px}
 .cat_product a{margin-right:20px;font-size:14px;color:#555;padding:2px 8px}
-.cat_product a:hover,.cat_product .cur{background:#09c;color:#fff;border-radius:2px}
+.cat_product a:hover,.cat_product .cur{background:#3879D9;color:#fff;border-radius:2px}
 .main_product{margin:20px auto;}
 .product_list{width:445px;height:160px;float:left;color:#333;border:1px #e8e8e8 solid;margin:5px;padding:20px;font-size:14px;}
 .product_list:hover{border:2px #b1b1b1 solid;padding:19px}
@@ -156,10 +156,10 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 
 
 /*单页模板*/
-.page_left{width:248px;float:left;margin-top:20px;}
+.page_left{width:248px;float:left;margin-top:10px;}
 .page_left h1{font-size:16px;height:40px;line-height:40px;padding-left:20px;}
 .page_left h1 a{color:#444;text-decoration:none;}
-.page_right{width:720px;float:right;margin-top:20px;}
+.page_right{width:720px;float:right;margin-top:10px; border-top: 5px solid #3879D9}
 .page_right  .page_img{text-align:center;}
 .page_right .page_content{margin-top:10px}
 .page_right .page_content h2{font-weight:normal;text-align:center;font-size:16px;line-height:50px}

@@ -76,11 +76,40 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
     margin-top: 10px;
     border: 1px solid #dadada;
 }
-.contact-us p{
+.contact-us ul{
     width: 100%;
     height: 158px;
     margin-top: 5px;
-    background-color: #EDECEC;
+}
+.contact-person{
+    background: url("../images/contactIcon/user.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
+}
+.contact-mobile{
+    background: url("../images/contactIcon/phone.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
+}
+.contact-phone{
+    background: url("../images/contactIcon/contact.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
+}
+.contact-fax{
+    background: url("../images/contactIcon/print.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
+}
+.contact-email{
+    background: url("../images/contactIcon/mail.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
+}
+.contact-address{
+    background: url("../images/contactIcon/home.png") no-repeat left center;
+    background-size:16px 16px;
+    padding-left: 20px;
 }
 .top_bor{border-top:1px solid #dadada}
 .center_bottom {margin-top:10px;padding-bottom:10px;height:283px;overflow:hidden;_width:335px;}
@@ -90,7 +119,7 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
   
 .left{width:275px;float:left;}
 
-.ind_bt{font-size:14px;height:30px;line-height:30px;font-family:"微软雅黑";border-bottom:1px solid #DBDBDB;overflow:hidden;color:#333}
+.ind_bt{font-size:14px;height:30px;line-height:30px;font-family:"微软雅黑";border-bottom:1px solid #3879D9;overflow:hidden;color:#3879D9}
 .ind_bt a{font-size:12px;font-weight:normal;color:#888;font-family:"宋体"}
 .gengduo{float: right;}
 
@@ -131,7 +160,7 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 .img_news ul li{width:130px;float:left;text-align:center;}
 .img_news ul li img{width:128px;height:82px;padding:1px;border:1px solid #cacaca;float:left;}
 .img_news ul li em{font-style: normal;}  
-.tit_img{background:url(../images/lbg.png) bottom repeat-x;padding-right:5px;padding-left:10px;}
+.tit_img{padding-right:5px;padding-left:10px;}
 .tit_img img{margin-top:5px;}
 
 .img_text{margin-top:10px;color:#666;}
@@ -141,9 +170,9 @@ filter:progid:dximagetransform.microsoft.gradient( gradienttype = 0,startcolorst
 
 .news_img{border:1px solid #dadada;overflow:hidden;height:200px;}
 
-.w185_imgnews {margin-top:15px;}
+.w185_imgnews {background-color: #EDECEC; height: 170px}
 .w185_imgnews ul{margin-left:8px}
-.w185_imgnews ul li{width:180px;float:left;text-align:center;margin-right:20px;_margin-right:16px;margin-bottom:10px;}
+.w185_imgnews ul li{width:180px;float:left;text-align:center;margin-right:20px;_margin-right:16px;margin-bottom:10px; margin-top: 15px}
 .w185_imgnews ul li  img{width:177px;height:115px;padding:1px;border:1px solid #cacaca;float:left;}
 .w185_imgnews ul li  em{font-style: normal; white-space:nowrap;}  
 .w185_imgnews .m_r0{margin-right:0px;}
